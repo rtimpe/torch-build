@@ -3,7 +3,7 @@ channels:
   - conda-forge
   - nodefaults
 dependencies:
-  - python=3.10
+  - python=3.13
   - pip
   - cpython
 
@@ -92,3 +92,10 @@ dependencies:
 
   # torch.compile halide backend
   - halide-python
+
+  # rtimpe dev tools
+  - emacs
+  - ripgrep
+  - clang-tools
+  - python-lsp-server
+  # no ruff because lintrunner will bring it in

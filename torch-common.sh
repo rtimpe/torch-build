@@ -9,16 +9,12 @@ if [[ "$(uname)" == "Linux" ]]; then
 fi
 
 # Compilation type
-export CMAKE_BUILD_TYPE=Release
+export CMAKE_BUILD_TYPE=RelWithDebInfo
 # CMAKE_BUILD_TYPE=RelWithDebInfo gives you line numbers on gdb,
 # but makes the symbol loading phase in gdb and the linking phase in compilation much slower.
 
 # CUDA
-if [[ "$(uname)" == "Darwin" ]]; then
-  export USE_CUDA=0
-else
-  export USE_CUDA=1
-fi
+export USE_CUDA=0
 
 if [[ -n "$TORCH_CUDA_ARCH_LIST" ]]; then
     :
@@ -36,14 +32,18 @@ export CCACHE_SLOPPINESS=pch_defines,time_macros  # Necessary for precompiled he
 # General utils
 export USE_KINETO=1                               # profiler
 export USE_CUDNN=1                                # CNNs
-export USE_FBGEMM=1                               # GEMMs
 # Don't build what we don't need
+export USE_DISTRIBUTED=0                          # distributed
+export USE_NCCL=0                                 # distributed
+export USE_GLOO=0                                 # distributed
+export USE_FBGEMM=0                               # GEMMs
+export USE_MKLDNN=0
 export BUILD_TEST=0                               # C++ tests
 export BUILD_CAFFE2=0                             # caffe2
 export BUILD_CAFFE2_OPS=0                         # caffe2
-export USE_SYSTEM_NCCL=1                          # distributed
 export USE_QNNPACK=0                              # quantized
 export USE_XNNPACK=0                              # quantized
+export USE_NNPACK=0
 # Disable these unless you are going to benchmark them
 export USE_FLASH_ATTENTION=0
 export USE_MEM_EFF_ATTENTION=0
