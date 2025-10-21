@@ -51,7 +51,6 @@ onnx-ir = "*"
 numpy = "*"
 expecttest = "*"
 hypothesis = "*"
-lintrunner = "*"
 scipy = "*"
 psutil = "*"
 pytest = "*"
@@ -78,3 +77,16 @@ python-lsp-server = "*"
 
 [pypi-dependencies]
 z3-solver = "*"
+
+# the lint env will inherit from default, but won't have torch installed.
+# however it seems to still work fine as long as it's run from the pytorch
+# directory
+[feature.lint.dependencies]
+lintrunner = "*"
+
+[feature.lint.tasks]
+# init with `pixi r lint init`
+lint = {cwd = "../pytorch", cmd="lintrunner"}
+
+[environments]
+lint = ["lint"]
