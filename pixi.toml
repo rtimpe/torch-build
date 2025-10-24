@@ -86,7 +86,7 @@ lintrunner = "*"
 
 [feature.lint.tasks]
 # init with `pixi r lint init`
-lint = {cwd = "../pytorch", cmd="lintrunner"}
+lintrunner = {cwd = "../pytorch", cmd="lintrunner"}
 
 [environments]
 lint = ["lint"]
