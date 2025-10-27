@@ -7,6 +7,7 @@ version = "0.1.0"
 
 [tasks]
 build = {cwd = "../pytorch", cmd = "../torch-build/pytorch-build.sh"}
+emacs = "emacs"
 # no test task, just use pixi shell
 # test = {cwd = "../pytorch/test", cmd = "pytest"}
 
