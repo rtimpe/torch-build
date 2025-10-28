@@ -315,6 +315,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/linux-64/rhash-1.4.6-hb9d3cd8_1.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/ripgrep-15.0.0-hdab8a38_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/rope-1.14.0-pyhd8ed1ab_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/ruff-0.14.2-ha3a3aed_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/scikit-build-0.18.1-pyhae55e72_2.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/scipy-1.16.2-py313h11c21cd_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/setuptools-80.9.0-pyhff2d567_0.conda
@@ -367,6 +368,9 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/linux-64/zlib-1.3.1-hb9d3cd8_2.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/zstandard-0.25.0-py313h54dd161_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/zstd-1.5.7-hb8e6e7a_2.conda
+      - pypi: https://files.pythonhosted.org/packages/d8/2b/a40e1488fdfa02d3f9a653a61a5935ea08b3c2225ee818db6a76c7ba9695/cattrs-25.3.0-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/7b/f0/92f2d609d6642b5f30cb50a885d2bf1483301c69d5786286500d15651ef2/lsprotocol-2025.0.0-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/85/c0/761e359e255fce641c263a3c3e43f7685d1667139e9d35a376c1cc9f6f70/python_lsp_ruff-2.3.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/b9/0b/f15168475e5493ea44fa3c5e642903f05d2b870db71ad05662ed87a06976/z3_solver-4.15.3.0-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
   lint:
     channels:
@@ -684,6 +688,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/linux-64/rhash-1.4.6-hb9d3cd8_1.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/ripgrep-15.0.0-hdab8a38_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/rope-1.14.0-pyhd8ed1ab_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/ruff-0.14.2-ha3a3aed_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/scikit-build-0.18.1-pyhae55e72_2.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/scipy-1.16.2-py313h11c21cd_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/setuptools-80.9.0-pyhff2d567_0.conda
@@ -736,6 +741,9 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/linux-64/zlib-1.3.1-hb9d3cd8_2.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/zstandard-0.25.0-py313h54dd161_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/zstd-1.5.7-hb8e6e7a_2.conda
+      - pypi: https://files.pythonhosted.org/packages/d8/2b/a40e1488fdfa02d3f9a653a61a5935ea08b3c2225ee818db6a76c7ba9695/cattrs-25.3.0-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/7b/f0/92f2d609d6642b5f30cb50a885d2bf1483301c69d5786286500d15651ef2/lsprotocol-2025.0.0-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/85/c0/761e359e255fce641c263a3c3e43f7685d1667139e9d35a376c1cc9f6f70/python_lsp_ruff-2.3.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/b9/0b/f15168475e5493ea44fa3c5e642903f05d2b870db71ad05662ed87a06976/z3_solver-4.15.3.0-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
 packages:
 - conda: https://conda.anaconda.org/conda-forge/linux-64/_openmp_mutex-4.5-5_kmp_llvm.conda
@@ -1042,6 +1050,23 @@ packages:
   purls: []
   size: 978114
   timestamp: 1741554591855
+- pypi: https://files.pythonhosted.org/packages/d8/2b/a40e1488fdfa02d3f9a653a61a5935ea08b3c2225ee818db6a76c7ba9695/cattrs-25.3.0-py3-none-any.whl
+  name: cattrs
+  version: 25.3.0
+  sha256: 9896e84e0a5bf723bc7b4b68f4481785367ce07a8a02e7e9ee6eb2819bc306ff
+  requires_dist:
+  - attrs>=25.4.0
+  - exceptiongroup>=1.1.1 ; python_full_version < '3.11'
+  - typing-extensions>=4.14.0
+  - pymongo>=4.4.0 ; extra == 'bson'
+  - cbor2>=5.4.6 ; extra == 'cbor2'
+  - msgpack>=1.0.5 ; extra == 'msgpack'
+  - msgspec>=0.19.0 ; implementation_name == 'cpython' and extra == 'msgspec'
+  - orjson>=3.11.3 ; implementation_name == 'cpython' and extra == 'orjson'
+  - pyyaml>=6.0 ; extra == 'pyyaml'
+  - tomlkit>=0.11.8 ; extra == 'tomlkit'
+  - ujson>=5.10.0 ; extra == 'ujson'
+  requires_python: '>=3.9'
 - conda: https://conda.anaconda.org/conda-forge/linux-64/ccache-4.11.3-h80c52d3_0.conda
   sha256: ac9464a60a7b085b5a999aaf33d882705390d7749b35e320f639614ae0cc9474
   md5: eb517c6a2b960c3ccb6f1db1005f063a
@@ -3963,6 +3988,14 @@ packages:
   purls: []
   size: 3211913
   timestamp: 1760282233940
+- pypi: https://files.pythonhosted.org/packages/7b/f0/92f2d609d6642b5f30cb50a885d2bf1483301c69d5786286500d15651ef2/lsprotocol-2025.0.0-py3-none-any.whl
+  name: lsprotocol
+  version: 2025.0.0
+  sha256: f9d78f25221f2a60eaa4a96d3b4ffae011b107537facee61d3da3313880995c7
+  requires_dist:
+  - attrs>=21.3.0
+  - cattrs!=23.2.1
+  requires_python: '>=3.8'
 - conda: https://conda.anaconda.org/conda-forge/linux-64/lz4-c-1.10.0-h5888daf_1.conda
   sha256: 47326f811392a5fd3055f0f773036c392d26fdb32e4d8e7a8197eed951489346
   md5: 9de5350a85c4a20c685259b889aa6393
@@ -4767,6 +4800,19 @@ packages:
   - pkg:pypi/python-lsp-jsonrpc?source=hash-mapping
   size: 13946
   timestamp: 1736013560597
+- pypi: https://files.pythonhosted.org/packages/85/c0/761e359e255fce641c263a3c3e43f7685d1667139e9d35a376c1cc9f6f70/python_lsp_ruff-2.3.0-py3-none-any.whl
+  name: python-lsp-ruff
+  version: 2.3.0
+  sha256: b858b698fbaff5670f6d5e6c66afc632908f78639d73dc85dedd33ae5fdd204f
+  requires_dist:
+  - ruff>=0.2.0
+  - python-lsp-server
+  - cattrs!=23.2.1
+  - lsprotocol>=2023.0.1
+  - tomli>=1.1.0 ; python_full_version < '3.11'
+  - pytest ; extra == 'dev'
+  - pre-commit ; extra == 'dev'
+  requires_python: '>=3.8'
 - conda: https://conda.anaconda.org/conda-forge/noarch/python-lsp-server-1.13.1-pyh332efcf_0.conda
   sha256: 6f157a1e2f132424365424a0e0039ae6d0955de18c8906edcadd516057b91648
   md5: 5112f71889e26c9e990b2287aa884665
@@ -4925,6 +4971,22 @@ packages:
   - pkg:pypi/rope?source=hash-mapping
   size: 151278
   timestamp: 1752367269107
+- conda: https://conda.anaconda.org/conda-forge/linux-64/ruff-0.14.2-ha3a3aed_0.conda
+  noarch: python
+  sha256: d6c3ee6381ce275107a3fb3cfe82499f3cb74da1d95e134a93ed5e4851b4ec01
+  md5: ba27344e81c9c460c9502fcbf7bd1e5c
+  depends:
+  - python
+  - __glibc >=2.17,<3.0.a0
+  - libgcc >=14
+  constrains:
+  - __glibc >=2.17
+  license: MIT
+  license_family: MIT
+  purls:
+  - pkg:pypi/ruff?source=hash-mapping
+  size: 11071649
+  timestamp: 1761253375744
 - conda: https://conda.anaconda.org/conda-forge/noarch/scikit-build-0.18.1-pyhae55e72_2.conda
   sha256: 5f32e13826531edf7f56ff665cf32b9adfea6a9ab7437468192c57db1ec9c430
   md5: 6cbb70215093227d2f259d4231ca82a4

@@ -75,9 +75,11 @@ emacs = "*"
 ripgrep = "*"
 clang-tools = "*"
 python-lsp-server = "*"
+ruff = "*"
 
 [pypi-dependencies]
 z3-solver = "*"
+python-lsp-ruff = "*"
 
 # the lint env will inherit from default, but won't have torch installed.
 # however it seems to still work fine as long as it's run from the pytorch
