@@ -5,22 +5,14 @@ name = "pytorch-dev"
 platforms = ["linux-64"]
 version = "0.1.0"
 
-[tasks]
-build = {cwd = "../pytorch", cmd = "../torch-build/pytorch-build.sh"}
-emacs = "emacs"
-# no test task, just use pixi shell
-# test = {cwd = "../pytorch/test", cmd = "pytest"}
-
 [dependencies]
-python = "3.13.*"
+python = "*"
 pip = "*"
 cpython = "*"
-gcc = "14.*"
-gxx = "14.*"
-gdb = "*"
+gcc = "*"
+gxx = "*"
 clang = "*"
 clangxx = "*"
-lldb = "*"
 magma = "*"
 cuda-driver-dev = "*"
 cuda-version = "12.9.*"
@@ -48,12 +40,10 @@ types-dataclasses = "*"
 typing = "*"
 typing-extensions = "*"
 wheel = "*"
-onnx-ir = "*"
 numpy = "*"
 expecttest = "*"
 hypothesis = "*"
 scipy = "*"
-psutil = "*"
 pytest = "*"
 parameterized = "*"
 ghstack = "*"
@@ -66,20 +56,34 @@ astunparse = "*"
 dill = "*"
 jinja2 = "*"
 lark = "*"
-optree = "*"
 tabulate = "*"
 networkx = "*"
 zlib = "*"
-halide-python = "*"
 emacs = "*"
 ripgrep = "*"
 clang-tools = "*"
-python-lsp-server = "*"
 ruff = "*"
 
 [pypi-dependencies]
 z3-solver = "*"
 python-lsp-ruff = "*"
+
+[feature.dev.tasks]
+build = {cwd = "../pytorch", cmd = "../torch-build/pytorch-build.sh"}
+emacs = "emacs"
+# no test task, just use pixi shell
+# test = {cwd = "../pytorch/test", cmd = "pytest"}
+
+[feature.py313.dependencies]
+python = "3.13.*"
+# packages that don't support free threading
+halide-python = "*"
+gdb = "*"
+onnx-ir = "*"
+python-lsp-server = "*"
+optree = "*"
+psutil = "*"
+lldb = "*"
 
 # the lint env will inherit from default, but won't have torch installed.
 # however it seems to still work fine as long as it's run from the pytorch
@@ -88,8 +92,13 @@ python-lsp-ruff = "*"
 lintrunner = "*"
 
 [feature.lint.tasks]
-# init with `pixi r lint init`
+# init with `pixi r lintrunner init`
 lintrunner = {cwd = "../pytorch", cmd="lintrunner"}
 
+[feature.ft.dependencies]
+python-freethreading = "3.14.*"
+
 [environments]
-lint = ["lint"]
+py313 = ["py313", "dev"]
+ft = ["ft", "dev"]
+lint = ["lint", "py313"]
