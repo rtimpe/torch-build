@@ -74,8 +74,7 @@ emacs = "emacs"
 # no test task, just use pixi shell
 # test = {cwd = "../pytorch/test", cmd = "pytest"}
 
-[feature.py313.dependencies]
-python = "3.13.*"
+[feature.nonft.dependencies]
 # packages that don't support free threading
 halide-python = "*"
 gdb = "*"
@@ -84,6 +83,12 @@ python-lsp-server = "*"
 optree = "*"
 psutil = "*"
 lldb = "*"
+
+[feature.py313.dependencies]
+python = "3.13.*"
+
+[feature.py314.dependencies]
+python = "3.14.*"
 
 # the lint env will inherit from default, but won't have torch installed.
 # however it seems to still work fine as long as it's run from the pytorch
@@ -102,6 +107,7 @@ python-freethreading = "3.14.*"
 build = {cwd = "../pytorch-ft", cmd = "../torch-build/pytorch-build.sh"}
 
 [environments]
-py313 = ["py313", "dev"]
+py313 = ["py313", "nonft", "dev"]
+py314 = ["py314", "nonft", "dev"]
 ft = ["ft", "dev"]
 lint = ["lint", "py313"]
