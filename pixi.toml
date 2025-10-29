@@ -98,6 +98,9 @@ lintrunner = {cwd = "../pytorch", cmd="lintrunner"}
 [feature.ft.dependencies]
 python-freethreading = "3.14.*"
 
+[feature.ft.tasks]
+build = {cwd = "../pytorch-ft", cmd = "../torch-build/pytorch-build.sh"}
+
 [environments]
 py313 = ["py313", "dev"]
 ft = ["ft", "dev"]
