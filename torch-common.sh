@@ -33,7 +33,7 @@ export CCACHE_SLOPPINESS=pch_defines,time_macros  # Necessary for precompiled he
 export USE_KINETO=1                               # profiler
 export USE_CUDNN=1                                # CNNs
 # Don't build what we don't need
-export USE_DISTRIBUTED=0                          # distributed
+export USE_DISTRIBUTED=1                          # distributed
 export USE_NCCL=0                                 # distributed
 export USE_GLOO=0                                 # distributed
 export USE_FBGEMM=0                               # GEMMs
