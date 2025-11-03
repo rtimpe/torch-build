@@ -112,6 +112,12 @@ python-freethreading = "3.14.*"
 [feature.ft.tasks]
 build = {cwd = "../pytorch-ft", cmd = "../torch-build/pytorch-build.sh"}
 
+[feature.py311.tasks]
+build = {cwd = "../pytorch311", cmd = "../torch-build/pytorch-build.sh"}
+
+[feature.py312.tasks]
+build = {cwd = "../pytorch312", cmd = "../torch-build/pytorch-build.sh"}
+
 [feature.py313.tasks]
 build = {cwd = "../pytorch313", cmd = "../torch-build/pytorch-build.sh"}
 
