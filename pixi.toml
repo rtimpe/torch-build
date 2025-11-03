@@ -121,6 +121,9 @@ build = {cwd = "../pytorch312", cmd = "../torch-build/pytorch-build.sh"}
 [feature.py313.tasks]
 build = {cwd = "../pytorch313", cmd = "../torch-build/pytorch-build.sh"}
 
+[feature.ci.tasks]
+install = {cwd = "../pytorch313", cmd = "pip install -r .ci/docker/requirements-ci.txt"}
+
 [environments]
 py311 = ["py311", "nonft", "dev"]
 py312 = ["py312", "nonft", "dev"]
@@ -128,3 +131,4 @@ py313 = ["py313", "nonft", "dev"]
 py314 = ["py314", "nonft", "dev"]
 ft = ["ft", "dev"]
 lint = ["lint", "py313"]
+ci = ["py313", "ci"]
