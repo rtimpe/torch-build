@@ -84,6 +84,12 @@ optree = "*"
 psutil = "*"
 lldb = "*"
 
+[feature.py311.dependencies]
+python = "3.11.*"
+
+[feature.py312.dependencies]
+python = "3.12.*"
+
 [feature.py313.dependencies]
 python = "3.13.*"
 
@@ -106,7 +112,12 @@ python-freethreading = "3.14.*"
 [feature.ft.tasks]
 build = {cwd = "../pytorch-ft", cmd = "../torch-build/pytorch-build.sh"}
 
+[feature.py313.tasks]
+build = {cwd = "../pytorch313", cmd = "../torch-build/pytorch-build.sh"}
+
 [environments]
+py311 = ["py311", "nonft", "dev"]
+py312 = ["py312", "nonft", "dev"]
 py313 = ["py313", "nonft", "dev"]
 py314 = ["py314", "nonft", "dev"]
 ft = ["ft", "dev"]
