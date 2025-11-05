@@ -124,6 +124,21 @@ build = {cwd = "../pytorch313", cmd = "../torch-build/pytorch-build.sh"}
 [feature.ci.tasks]
 install = {cwd = "../pytorch313", cmd = "pip install -r .ci/docker/requirements-ci.txt"}
 
+# disable build isolation so we can declare torch (and other pacakges) as dependencies
+[pypi-options]
+no-build-isolation = true
+
+[feature.bm.pypi-dependencies]
+# assumes torch has already been built with pytorch-build.sh or similar.  this
+# is just to make sure it's installed
+torch = {path = "../pytorch313", editable = true}
+torchvision = {path = "../torch-vision", editable = true}
+
+[feature.bm.dependencies]
+pandas = "*"
+tqdm = "*"
+transformers = "*"
+
 [environments]
 py311 = ["py311", "nonft", "dev"]
 py312 = ["py312", "nonft", "dev"]
@@ -132,3 +147,4 @@ py314 = ["py314", "nonft", "dev"]
 ft = ["ft", "dev"]
 lint = ["lint", "py313"]
 ci = ["py313", "ci"]
+bm = ["py313", "nonft", "bm"]
