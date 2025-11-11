@@ -139,12 +139,18 @@ pandas = "*"
 tqdm = "*"
 transformers = "*"
 
+[feature.ft313.dependencies]
+python-freethreading = "3.13.*"
+libxslt = "*"
+libxml2-devel = "*"
+
 [environments]
 py311 = ["py311", "nonft", "dev"]
 py312 = ["py312", "nonft", "dev"]
 py313 = ["py313", "nonft", "dev"]
 py314 = ["py314", "nonft", "dev"]
 ft = ["ft", "dev"]
+ft313 = ["ft313", "dev"]
 lint = ["lint", "py313"]
 ci = ["py313", "ci"]
 bm = ["py313", "nonft", "bm"]
