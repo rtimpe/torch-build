@@ -377,7 +377,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/linux-64/s2n-1.6.0-h8399546_1.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/safetensors-0.6.2-py313h5c7d99a_1.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/scikit-build-0.18.1-pyhae55e72_2.conda
-      - conda: https://conda.anaconda.org/conda-forge/linux-64/scipy-1.16.3-py313h11c21cd_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/scipy-1.14.1-py313h27c5614_2.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/setuptools-80.9.0-pyhff2d567_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/six-1.17.0-pyhe01879c_1.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/snappy-1.2.2-h03e3b7b_0.conda
@@ -720,7 +720,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/linux-64/ripgrep-15.1.0-hdab8a38_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/ruff-0.14.4-h813ae00_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/scikit-build-0.18.1-pyhae55e72_2.conda
-      - conda: https://conda.anaconda.org/conda-forge/linux-64/scipy-1.16.3-py313h11c21cd_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/scipy-1.14.1-py313h27c5614_2.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/setuptools-80.9.0-pyhff2d567_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/six-1.17.0-pyhe01879c_1.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/sortedcontainers-2.4.0-pyhd8ed1ab_1.conda
@@ -2078,7 +2078,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/linux-64/ripgrep-15.1.0-hdab8a38_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/ruff-0.14.4-h813ae00_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/scikit-build-0.18.1-pyhae55e72_2.conda
-      - conda: https://conda.anaconda.org/conda-forge/linux-64/scipy-1.16.3-py313h11c21cd_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/scipy-1.14.1-py313h27c5614_2.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/setuptools-80.9.0-pyhff2d567_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/six-1.17.0-pyhe01879c_1.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/sortedcontainers-2.4.0-pyhd8ed1ab_1.conda
@@ -2451,7 +2451,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/rope-1.14.0-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/ruff-0.14.4-h813ae00_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/scikit-build-0.18.1-pyhae55e72_2.conda
-      - conda: https://conda.anaconda.org/conda-forge/linux-64/scipy-1.16.3-py313h11c21cd_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/scipy-1.14.1-py313h27c5614_2.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/setuptools-80.9.0-pyhff2d567_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/six-1.17.0-pyhe01879c_1.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/snowballstemmer-3.0.1-pyhd8ed1ab_0.conda
@@ -8878,29 +8878,29 @@ packages:
   - pkg:pypi/scikit-build?source=hash-mapping
   size: 117077
   timestamp: 1741787936786
-- conda: https://conda.anaconda.org/conda-forge/linux-64/scipy-1.16.3-py313h11c21cd_0.conda
-  sha256: 8883c2fe642b1a4afc2642fd0b27dc0c8d938f60400fe2989f291b67cd6cf345
-  md5: f6b930ea1ee93d0fb03a53e9437ec291
+- conda: https://conda.anaconda.org/conda-forge/linux-64/scipy-1.14.1-py313h27c5614_2.conda
+  sha256: 68135151888b63c9469f0f7142bd4e06b8920afc69fb2f9f9f9655ae1d81a753
+  md5: 25c0eda0d2ed28962c5f3e8f7fbeace3
   depends:
   - __glibc >=2.17,<3.0.a0
   - libblas >=3.9.0,<4.0a0
   - libcblas >=3.9.0,<4.0a0
-  - libgcc >=14
+  - libgcc >=13
   - libgfortran
-  - libgfortran5 >=14.3.0
+  - libgfortran5 >=13.3.0
   - liblapack >=3.9.0,<4.0a0
-  - libstdcxx >=14
-  - numpy <2.6
-  - numpy >=1.23,<3
-  - numpy >=1.25.2
+  - libstdcxx >=13
+  - numpy <2.4
+  - numpy >=1.21,<3
+  - numpy >=1.23.5
   - python >=3.13,<3.14.0a0
   - python_abi 3.13.* *_cp313
   license: BSD-3-Clause
   license_family: BSD
   purls:
   - pkg:pypi/scipy?source=hash-mapping
-  size: 17259821
-  timestamp: 1761691271512
+  size: 17667257
+  timestamp: 1733621605879
 - conda: https://conda.anaconda.org/conda-forge/linux-64/scipy-1.16.3-py313h2f923a1_0.conda
   sha256: cb34ea197be8fcc2c49c86abf3f7ebf7740fb8e688b0c1167e65b24f90224c0a
   md5: ecd3fbabd548904588991ca8c833b8e6
@@ -9182,8 +9182,8 @@ packages:
   timestamp: 1749127286558
 - pypi: ../pytorch313
   name: torch
-  version: 2.10.0a0+git9261a1f
-  sha256: 6db3641a55b8095ee683b699b58267428b6412f3982ed07effe7466c6111c5a3
+  version: 2.10.0a0+git3e7a66f
+  sha256: bac7b1567eba43cac89ff909e52e0ee6258456b7701ee23e8f0ad12ab9c8f837
   requires_dist:
   - filelock
   - typing-extensions>=4.10.0
