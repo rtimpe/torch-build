@@ -69,7 +69,7 @@ z3-solver = "*"
 python-lsp-ruff = "*"
 
 [feature.dev.tasks]
-build = {cwd = "../pytorch", cmd = "../torch-build/pytorch-build.sh"}
+build = {cwd = "$PYTORCH_DIR", cmd = "../torch-build/pytorch-build.sh"}
 emacs = "emacs"
 # no test task, just use pixi shell
 # test = {cwd = "../pytorch/test", cmd = "pytest"}
@@ -87,8 +87,14 @@ lldb = "*"
 [feature.py313.dependencies]
 python = "3.13.*"
 
+[feature.py313.activation.env]
+PYTORCH_DIR = "../pytorch313"
+
 [feature.py314.dependencies]
 python = "3.14.*"
+
+[feature.py314.activation.env]
+PYTORCH_DIR = "../pytorch313"
 
 # the lint env will inherit from default, but won't have torch installed.
 # however it seems to still work fine as long as it's run from the pytorch
@@ -100,27 +106,25 @@ lintrunner = "*"
 # init with `pixi r lintrunner init`
 lintrunner = {cwd = "../pytorch", cmd="lintrunner"}
 
+[feature.ft.activation.env]
+PYTORCH_DIR = "../pytorch-ft"
+
 [feature.ft.dependencies]
 python-freethreading = "3.14.*"
 
-[feature.ft.tasks]
-build = {cwd = "../pytorch-ft", cmd = "../torch-build/pytorch-build.sh"}
-
-[feature.py313.tasks]
-build = {cwd = "../pytorch313", cmd = "../torch-build/pytorch-build.sh"}
-
 [feature.ci.tasks]
-install = {cwd = "../pytorch313", cmd = "pip install -r .ci/docker/requirements-ci.txt"}
+install = {cwd = "$PYTORCH_DIR", cmd = "pip install -r .ci/docker/requirements-ci.txt"}
 
 # disable build isolation so we can declare torch (and other pacakges) as dependencies
 [pypi-options]
 no-build-isolation = true
 
-[feature.bm.pypi-dependencies]
-# assumes torch has already been built with pytorch-build.sh or similar.  this
-# is just to make sure it's installed
-torch = {path = "../pytorch313", editable = true}
-torchvision = {path = "../torch-vision", editable = true}
+[feature.bm.tasks]
+# torch should already be built by pytorch-build.sh or similar, this is simply
+# to install.  this is a task rather than a dependency because we want it to be
+# explicit (in case pytorch hasn't been built/the directory structure isn't set
+# up, etc)
+install = {cmd = "cd $PYTORCH_DIR && pip install --no-build-isolation -e . && cd ../torch-vision && pip install -e ."}
 
 [feature.bm.dependencies]
 pandas = "*"
