@@ -116,8 +116,8 @@ python-freethreading = "3.14.*"
 install = {cwd = "$PYTORCH_DIR", cmd = "pip install -r .ci/docker/requirements-ci.txt"}
 
 # disable build isolation so we can declare torch (and other pacakges) as dependencies
-[pypi-options]
-no-build-isolation = true
+# [pypi-options]
+# no-build-isolation = true
 
 [feature.bm.tasks]
 # torch should already be built by pytorch-build.sh or similar, this is simply
