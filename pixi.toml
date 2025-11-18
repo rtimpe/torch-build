@@ -86,6 +86,7 @@ lldb = "*"
 
 [feature.py313.dependencies]
 python = "3.13.*"
+numpy = "2.2.*"
 
 [feature.py313.activation.env]
 PYTORCH_DIR = "../pytorch313"
