@@ -69,7 +69,7 @@ z3-solver = "*"
 python-lsp-ruff = "*"
 
 [feature.dev.tasks]
-build = {cwd = "$PYTORCH_DIR", cmd = "../torch-build/pytorch-build.sh"}
+build = {cmd = "cd $PYTORCH_DIR && ../torch-build/pytorch-build.sh"}
 emacs = "emacs"
 # no test task, just use pixi shell
 # test = {cwd = "../pytorch/test", cmd = "pytest"}
@@ -94,7 +94,7 @@ PYTORCH_DIR = "../pytorch313"
 python = "3.14.*"
 
 [feature.py314.activation.env]
-PYTORCH_DIR = "../pytorch313"
+PYTORCH_DIR = "../pytorch"
 
 # the lint env will inherit from default, but won't have torch installed.
 # however it seems to still work fine as long as it's run from the pytorch
