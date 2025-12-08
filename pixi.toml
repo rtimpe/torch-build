@@ -59,14 +59,16 @@ lark = "*"
 tabulate = "*"
 networkx = "*"
 zlib = "*"
-emacs = "*"
-ripgrep = "*"
-clang-tools = "*"
-ruff = "*"
 
 [pypi-dependencies]
 z3-solver = "*"
 python-lsp-ruff = "*"
+
+[feature.dev.dependencies]
+emacs = "*"
+ripgrep = "*"
+clang-tools = "*"
+ruff = "*"
 
 [feature.dev.tasks]
 build = {cmd = "cd $PYTORCH_DIR && ../torch-build/pytorch-build.sh"}
@@ -142,7 +144,7 @@ libxml2-devel = "*"
 [environments]
 py313 = ["py313", "nonft", "dev"]
 py314 = ["py314", "nonft", "dev"]
-ft = ["ft", "dev"]
+ft = ["ft"]
 ft313 = ["ft313", "dev"]
 lint = ["lint", "py313"]
 ci = ["py313", "ci"]
