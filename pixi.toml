@@ -64,15 +64,17 @@ zlib = "*"
 z3-solver = "*"
 python-lsp-ruff = "*"
 
-[feature.dev.dependencies]
+[feature.editor.dependencies]
 emacs = "*"
 ripgrep = "*"
 clang-tools = "*"
 ruff = "*"
 
+[feature.editor.tasks]
+emacs = "emacs"
+
 [feature.dev.tasks]
 build = {cmd = "cd $PYTORCH_DIR && ../torch-build/pytorch-build.sh"}
-emacs = "emacs"
 # no test task, just use pixi shell
 # test = {cwd = "../pytorch/test", cmd = "pytest"}
 
@@ -142,9 +144,9 @@ libxslt = "*"
 libxml2-devel = "*"
 
 [environments]
-py313 = ["py313", "nonft", "dev"]
+py313 = ["py313", "nonft", "dev", "editor"]
 py314 = ["py314", "nonft", "dev"]
-ft = ["ft"]
+ft = ["ft", "dev"]
 ft313 = ["ft313", "dev"]
 lint = ["lint", "py313"]
 ci = ["py313", "ci"]
