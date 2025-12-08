@@ -96,7 +96,7 @@ numpy = "2.2.*"
 PYTORCH_DIR = "../pytorch313"
 
 [feature.py314.dependencies]
-python = "3.14.*"
+python = ">=3.14.2"
 
 [feature.py314.activation.env]
 PYTORCH_DIR = "../pytorch"
@@ -145,7 +145,7 @@ libxml2-devel = "*"
 
 [environments]
 py313 = ["py313", "nonft", "dev", "editor"]
-py314 = ["py314", "nonft", "dev"]
+py314 = ["py314", "dev"]
 ft = ["ft", "dev"]
 ft313 = ["ft313", "dev"]
 lint = ["lint", "py313"]
