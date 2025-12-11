@@ -62,13 +62,16 @@ zlib = "*"
 
 [pypi-dependencies]
 z3-solver = "*"
-python-lsp-ruff = "*"
 
 [feature.editor.dependencies]
 emacs = "*"
 ripgrep = "*"
 clang-tools = "*"
 ruff = "*"
+python-lsp-server = "*"
+
+[feature.editor.pypi-dependencies]
+python-lsp-ruff = "*"
 
 [feature.editor.tasks]
 emacs = "emacs"
@@ -83,22 +86,14 @@ build = {cmd = "cd $PYTORCH_DIR && ../torch-build/pytorch-build.sh"}
 halide-python = "*"
 gdb = "*"
 onnx-ir = "*"
-python-lsp-server = "*"
 optree = "*"
 psutil = "*"
 lldb = "*"
 
-[feature.py313.dependencies]
-python = "3.13.*"
-numpy = "2.2.*"
-
-[feature.py313.activation.env]
-PYTORCH_DIR = "../pytorch313"
-
 [feature.py314.dependencies]
 python = ">=3.14.2"
 
-[feature.py314.activation.env]
+[feature.py314-env.activation.env]
 PYTORCH_DIR = "../pytorch"
 
 # the lint env will inherit from default, but won't have torch installed.
@@ -109,9 +104,9 @@ lintrunner = "*"
 
 [feature.lint.tasks]
 # init with `pixi r lintrunner init`
-lintrunner = {cwd = "../pytorch", cmd="lintrunner"}
+lintrunner = {cmd="cd $PYTORCH_DIR && lintrunner"}
 
-[feature.ft.activation.env]
+[feature.ft-env.activation.env]
 PYTORCH_DIR = "../pytorch-ft"
 
 [feature.ft.dependencies]
@@ -138,18 +133,17 @@ pandas = "*"
 tqdm = "*"
 transformers = "*"
 
-[feature.ft313.dependencies]
-python-freethreading = "3.13.*"
-libxslt = "*"
-libxml2-devel = "*"
+[feature.py313.dependencies]
+python = "3.13.*"
 
 [environments]
-py313 = ["py313", "nonft", "dev", "editor"]
-py314 = ["py314", "dev"]
-ft = ["ft", "dev"]
-ft313 = ["ft313", "dev"]
-lint = ["lint", "py313"]
-ci = ["py313", "ci"]
-ci314 = ["py314", "ci"]
-cift = ["ft", "ci"]
-bm = ["py313", "nonft", "bm"]
+py314 = ["py314", "py314-env", "dev"]
+py314-lint = ["py313", "py314-env", "lint"]
+ft = ["ft", "ft-env", "dev"]
+ft-lint = ["py313", "ft-env", "lint"]
+ci314 = ["py314", "py314-env", "ci"]
+cift = ["ft", "ft-env", "ci"]
+bm = ["py314", "py314-env", "nonft", "bm"]
+editor = ["editor"]
+# can remove once ghstack supports py314
+ghstack = ["py313"]
