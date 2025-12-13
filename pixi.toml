@@ -136,6 +136,27 @@ transformers = "*"
 [feature.py313.dependencies]
 python = "3.13.*"
 
+[feature.cpython.dependencies]
+gcc = "*"
+gxx = "*"
+pkg-config = "*"
+zlib = "*"
+openssl = "*"
+gdb = "*" # depends on python
+ccache = "*"
+
+[feature.cpython.tasks]
+config-py-rel = "cd ../cpython && mkdir -p build-dbg && cd build-dbg && ../configure --prefix=/home/rtimpe/git/torch-build/.pixi/envs/cpython/ --disable-gil"
+config-py-dbg = "cd ../cpython && mkdir -p build-dbg && cd build-dbg && ../configure --prefix=/home/rtimpe/git/torch-build/.pixi/envs/cpython/ --disable-gil --with-py-debug"
+build-py = "cd ../cpython/build-dbg && make install -j10"
+build = "cd $PYTORCH_DIR && ../torch-build/pytorch-build-custom-cpython.sh"
+
+# [feature.cpython.pypi-dependencies]
+# pip = "*"
+
+[feature.pt-dbg-env.activation.env]
+PYTORCH_DIR = "../pytorch-dbg"
+
 [environments]
 py314 = ["py314", "py314-env", "dev"]
 py314-lint = ["py313", "py314-env", "lint"]
@@ -147,3 +168,4 @@ bm = ["py314", "py314-env", "nonft", "bm"]
 editor = ["editor"]
 # can remove once ghstack supports py314
 ghstack = ["py313"]
+cpython = {no-default-feature = true, features = ["cpython", "pt-dbg-env", "dev"]}
