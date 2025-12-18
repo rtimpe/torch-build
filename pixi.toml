@@ -121,12 +121,12 @@ python-freethreading = "3.14.*"
 # to install.  this is a task rather than a dependency because we want it to be
 # explicit (in case pytorch hasn't been built/the directory structure isn't set
 # up, etc)
-install = {cmd = "cd $PYTORCH_DIR && pip install --no-build-isolation -e . && cd ../torch-vision && pip install -e ."}
+install = {cmd = "cd $PYTORCH_DIR && pip install --no-build-isolation -e . -v && cd ../torch-vision && pip install -e . -v"}
 
 [feature.ci.tasks]
 # installs torch and ci deps.  see above for why torch is installed here instead
 # of listed as a dependency
-install = {cmd = "cd $PYTORCH_DIR && pip install --no-build-isolation -e . && pip install -r .ci/docker/requirements-ci.txt"}
+install = {cmd = "cd $PYTORCH_DIR && pip install --no-build-isolation -e . -v && pip install -r .ci/docker/requirements-ci.txt"}
 
 [feature.bm.dependencies]
 pandas = "*"
