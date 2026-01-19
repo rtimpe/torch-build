@@ -167,6 +167,4 @@ ci314 = ["py314", "py314-env", "ci"]
 cift = ["ft", "ft-env", "ci"]
 bm = ["py314", "py314-env", "nonft", "bm"]
 editor = ["editor"]
-# can remove once ghstack supports py314
-ghstack = ["py313"]
 cpython = {no-default-feature = true, features = ["cpython", "pt-dbg-env", "dev"]}
