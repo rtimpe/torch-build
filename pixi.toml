@@ -101,6 +101,7 @@ PYTORCH_DIR = "../pytorch"
 # directory
 [feature.lint.dependencies]
 lintrunner = "*"
+uv = "*"
 
 [feature.lint.tasks]
 # init with `pixi r lintrunner init`
