@@ -125,6 +125,7 @@ python-freethreading = "3.14.*"
 # up, etc)
 install = {cmd = "cd $PYTORCH_DIR && pip install --no-build-isolation -e . -v && cd ../torch-vision && pip install -e . -v"}
 # maybe add pip install -r .ci/docker/requirements-ci.txt
+# also need to do python install.py in torchbenchark.  use --numpy to skip checks for torch, which is already installed above.  model names specified as positional args
 
 [feature.ci.tasks]
 # installs torch and ci deps.  see above for why torch is installed here instead
