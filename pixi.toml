@@ -62,6 +62,7 @@ zlib = "*"
 
 [pypi-dependencies]
 z3-solver = "*"
+tlparse = "*"
 
 [feature.editor.dependencies]
 emacs = "*"
