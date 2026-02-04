@@ -63,6 +63,7 @@ zlib = "*"
 [pypi-dependencies]
 z3-solver = "*"
 tlparse = "*"
+protobuf = "*" # for testing protobuf support in dynamo
 
 [feature.editor.dependencies]
 emacs = "*"
