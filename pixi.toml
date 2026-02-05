@@ -140,6 +140,9 @@ transformers = "*"
 [feature.py313.dependencies]
 python = "3.13.*"
 
+[feature.py313-env.activation.env]
+PYTORCH_DIR = "../pytorch-313"
+
 [feature.cpython.dependencies]
 gcc = "*"
 gxx = "*"
@@ -164,6 +167,8 @@ PYTORCH_DIR = "../pytorch-dbg"
 [environments]
 py314 = ["py314", "py314-env", "dev"]
 py314-lint = ["py313", "py314-env", "lint"]
+py313 = ["py313", "py313-env", "dev"]
+py313-lint = ["py313", "py313-env", "lint"]
 ft = ["ft", "ft-env", "dev"]
 ft-lint = ["py313", "ft-env", "lint"]
 ci314 = ["py314", "py314-env", "ci"]
