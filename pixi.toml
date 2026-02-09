@@ -59,9 +59,9 @@ lark = "*"
 tabulate = "*"
 networkx = "*"
 zlib = "*"
+z3-solver = "*"
 
 [pypi-dependencies]
-z3-solver = "*"
 tlparse = "*"
 protobuf = "*" # for testing protobuf support in dynamo
 
