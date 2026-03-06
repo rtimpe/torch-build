@@ -149,20 +149,31 @@ gxx = "*"
 pkg-config = "*"
 zlib = "*"
 openssl = "*"
-gdb = "*" # depends on python
+# gdb = "*" # depends on python
 ccache = "*"
+# other cpython build deps
+bzip2 = "*"
+libexpat = "*"
+libffi = "*"
+liblzma = "*"
+libmpdec = "*"
+libsqlite = "*"
+libuuid = "*"
+ncurses = "*"
+readline = "*"
 
 [feature.cpython.tasks]
 config-py-rel = "cd ../cpython && mkdir -p build-dbg && cd build-dbg && ../configure --prefix=/home/rtimpe/git/torch-build/.pixi/envs/cpython/ --disable-gil"
 config-py-dbg = "cd ../cpython && mkdir -p build-dbg && cd build-dbg && ../configure --prefix=/home/rtimpe/git/torch-build/.pixi/envs/cpython/ --disable-gil --with-py-debug"
 build-py = "cd ../cpython/build-dbg && make install -j10"
+install-reqs = "cd $PYTORCH_DIR && python3 -m pip install -r requirements.txt" # needed for development versions that don't have builds in conda-forge/pypi
 build = "cd $PYTORCH_DIR && ../torch-build/pytorch-build-custom-cpython.sh"
 
 # [feature.cpython.pypi-dependencies]
 # pip = "*"
 
-[feature.pt-dbg-env.activation.env]
-PYTORCH_DIR = "../pytorch-dbg"
+[feature.py315-env.activation.env]
+PYTORCH_DIR = "../pytorch-315"
 
 [environments]
 py314 = ["py314", "py314-env", "dev"]
@@ -175,4 +186,4 @@ ci314 = ["py314", "py314-env", "ci"]
 cift = ["ft", "ft-env", "ci"]
 bm = ["py314", "py314-env", "nonft", "bm"]
 editor = ["editor"]
-cpython = {no-default-feature = true, features = ["cpython", "pt-dbg-env", "dev"]}
+cpython = {no-default-feature = true, features = ["cpython", "py315-env", "dev"]}
