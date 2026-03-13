@@ -173,9 +173,9 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/linux-64/libllvm22-22.1.0-hf7376ad_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/liblzma-5.8.2-hb03c661_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/liblzma-devel-5.8.2-hb03c661_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/linux-64/libmagma-2.10.0-hd93470c_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/linux-64/libmagma-devel-2.10.0-h5dfe813_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/linux-64/libmagma_sparse-2.10.0-hbc3fd83_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/libmagma-2.9.0-hd93470c_6.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/libmagma-devel-2.9.0-h5dfe813_6.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/libmagma_sparse-2.9.0-h69b1545_6.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/libmpdec-4.0.0-hb03c661_1.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/libnghttp2-1.67.0-had1ee68_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/libnl-3.11.0-hb9d3cd8_0.conda
@@ -461,9 +461,9 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/linux-64/liblapack-3.11.0-5_h47877c9_openblas.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/libllvm22-22.1.0-hf7376ad_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/liblzma-5.8.2-hb03c661_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/linux-64/libmagma-2.10.0-hd93470c_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/linux-64/libmagma-devel-2.10.0-h5dfe813_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/linux-64/libmagma_sparse-2.10.0-hbc3fd83_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/libmagma-2.9.0-hd93470c_6.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/libmagma-devel-2.9.0-h5dfe813_6.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/libmagma_sparse-2.9.0-h69b1545_6.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/libmpdec-4.0.0-hb03c661_1.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/libnghttp2-1.67.0-had1ee68_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/libnl-3.11.0-hb9d3cd8_0.conda
@@ -717,9 +717,9 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/linux-64/liblapack-3.11.0-5_h47877c9_openblas.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/libllvm22-22.1.0-hf7376ad_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/liblzma-5.8.2-hb03c661_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/linux-64/libmagma-2.10.0-hd93470c_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/linux-64/libmagma-devel-2.10.0-h5dfe813_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/linux-64/libmagma_sparse-2.10.0-hbc3fd83_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/libmagma-2.9.0-hd93470c_6.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/libmagma-devel-2.9.0-h5dfe813_6.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/libmagma_sparse-2.9.0-h69b1545_6.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/libmpdec-4.0.0-hb03c661_1.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/libnghttp2-1.67.0-had1ee68_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/libnl-3.11.0-hb9d3cd8_0.conda
@@ -1019,9 +1019,9 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/linux-64/liblapack-3.11.0-5_h47877c9_openblas.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/libllvm22-22.1.0-hf7376ad_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/liblzma-5.8.2-hb03c661_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/linux-64/libmagma-2.10.0-hd93470c_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/linux-64/libmagma-devel-2.10.0-h5dfe813_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/linux-64/libmagma_sparse-2.10.0-hbc3fd83_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/libmagma-2.9.0-hd93470c_6.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/libmagma-devel-2.9.0-h5dfe813_6.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/libmagma_sparse-2.9.0-h69b1545_6.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/libmpdec-4.0.0-hb03c661_1.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/libnghttp2-1.67.0-had1ee68_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/libnl-3.11.0-hb9d3cd8_0.conda
@@ -1324,9 +1324,9 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/linux-64/liblapack-3.11.0-5_h47877c9_openblas.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/libllvm22-22.1.0-hf7376ad_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/liblzma-5.8.2-hb03c661_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/linux-64/libmagma-2.10.0-hd93470c_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/linux-64/libmagma-devel-2.10.0-h5dfe813_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/linux-64/libmagma_sparse-2.10.0-hbc3fd83_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/libmagma-2.9.0-hd93470c_6.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/libmagma-devel-2.9.0-h5dfe813_6.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/libmagma_sparse-2.9.0-h69b1545_6.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/libmpdec-4.0.0-hb03c661_1.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/libnghttp2-1.67.0-had1ee68_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/libnl-3.11.0-hb9d3cd8_0.conda
@@ -1636,9 +1636,9 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/linux-64/liblapack-3.11.0-5_h47877c9_openblas.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/libllvm22-22.1.0-hf7376ad_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/liblzma-5.8.2-hb03c661_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/linux-64/libmagma-2.10.0-hd93470c_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/linux-64/libmagma-devel-2.10.0-h5dfe813_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/linux-64/libmagma_sparse-2.10.0-hbc3fd83_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/libmagma-2.9.0-hd93470c_6.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/libmagma-devel-2.9.0-h5dfe813_6.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/libmagma_sparse-2.9.0-h69b1545_6.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/libmpdec-4.0.0-hb03c661_1.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/libnghttp2-1.67.0-had1ee68_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/libnl-3.11.0-hb9d3cd8_0.conda
@@ -1892,9 +1892,9 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/linux-64/liblapack-3.11.0-5_h47877c9_openblas.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/libllvm22-22.1.0-hf7376ad_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/liblzma-5.8.2-hb03c661_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/linux-64/libmagma-2.10.0-hd93470c_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/linux-64/libmagma-devel-2.10.0-h5dfe813_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/linux-64/libmagma_sparse-2.10.0-hbc3fd83_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/libmagma-2.9.0-hd93470c_6.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/libmagma-devel-2.9.0-h5dfe813_6.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/libmagma_sparse-2.9.0-h69b1545_6.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/libmpdec-4.0.0-hb03c661_1.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/libnghttp2-1.67.0-had1ee68_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/libnl-3.11.0-hb9d3cd8_0.conda
@@ -2148,9 +2148,9 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/linux-64/liblapack-3.11.0-5_h47877c9_openblas.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/libllvm22-22.1.0-hf7376ad_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/liblzma-5.8.2-hb03c661_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/linux-64/libmagma-2.10.0-hd93470c_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/linux-64/libmagma-devel-2.10.0-h5dfe813_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/linux-64/libmagma_sparse-2.10.0-hbc3fd83_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/libmagma-2.9.0-hd93470c_6.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/libmagma-devel-2.9.0-h5dfe813_6.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/libmagma_sparse-2.9.0-h69b1545_6.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/libmpdec-4.0.0-hb03c661_1.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/libnghttp2-1.67.0-had1ee68_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/libnl-3.11.0-hb9d3cd8_0.conda
@@ -5206,9 +5206,9 @@ packages:
   purls: []
   size: 465085
   timestamp: 1768752643506
-- conda: https://conda.anaconda.org/conda-forge/linux-64/libmagma-2.10.0-hd93470c_0.conda
-  sha256: 07607cffe1f53a5e405e29c897bfcad800f3c71b2a57ed7502a0ef82a60edc78
-  md5: d9e0e4dbf5aff16fb804e6a656fc73bc
+- conda: https://conda.anaconda.org/conda-forge/linux-64/libmagma-2.9.0-hd93470c_6.conda
+  sha256: 5ea4675cb4a900795a5eb33519307cf985fd3787eb0cf33142e52ecc8eb8a7d4
+  md5: 886e83a08e0ad01d7fe868972bc729f3
   depends:
   - __glibc >=2.28,<3.0.a0
   - _openmp_mutex >=4.5
@@ -5223,42 +5223,43 @@ packages:
   license: BSD-3-Clause
   license_family: BSD
   purls: []
-  size: 272468878
-  timestamp: 1773078724253
-- conda: https://conda.anaconda.org/conda-forge/linux-64/libmagma-devel-2.10.0-h5dfe813_0.conda
-  sha256: 065126c72c5b4b45fa2ba5eb031258b2704d4932f26a4c0d09a87b1c38051328
-  md5: cdf7e044187e7eec78d28dc3029fdc0c
+  size: 387811432
+  timestamp: 1767135866822
+- conda: https://conda.anaconda.org/conda-forge/linux-64/libmagma-devel-2.9.0-h5dfe813_6.conda
+  sha256: 2e4965730f562859bc755fb4119d279f5fa7852742ba975d179d545dec86e764
+  md5: 01dd9a9dd58bcd84e6257cb71e2eee6f
   depends:
   - __glibc >=2.28,<3.0.a0
   - _openmp_mutex >=4.5
   - cuda-version >=13,<14.0a0
   - libgcc >=14
-  - libmagma 2.10.0 hd93470c_0
-  - libmagma_sparse 2.10.0 hbc3fd83_0
+  - libmagma 2.9.0 hd93470c_6
+  - libmagma_sparse 2.9.0 h69b1545_6
   - libstdcxx >=14
   license: BSD-3-Clause
   license_family: BSD
   purls: []
-  size: 91775
-  timestamp: 1773078905640
-- conda: https://conda.anaconda.org/conda-forge/linux-64/libmagma_sparse-2.10.0-hbc3fd83_0.conda
-  sha256: 7f9a1349162b536375afc2558246704bad5d228897f8bcbcc6b5c922c4f05b85
-  md5: 6bf72c4fb72eee6cc41c0fd9b1d31b0c
+  size: 106269
+  timestamp: 1767136050060
+- conda: https://conda.anaconda.org/conda-forge/linux-64/libmagma_sparse-2.9.0-h69b1545_6.conda
+  sha256: 165b684d7c34dfc8e50600a55b8d208fa5667016596598d8d3cbae90ac5fcaeb
+  md5: e62da8f6cb1cc2be653db93cfef1ad11
   depends:
   - __glibc >=2.28,<3.0.a0
   - _openmp_mutex >=4.5
   - cuda-cudart
   - cuda-version >=13,<14.0a0
+  - libblas >=3.9.0,<4.0a0
   - libcusparse
   - libgcc >=14
   - liblapack >=3.9.0,<4.0a0
-  - libmagma 2.10.0 hd93470c_0
+  - libmagma 2.9.0 hd93470c_6
   - libstdcxx >=14
   license: BSD-3-Clause
   license_family: BSD
   purls: []
-  size: 5925478
-  timestamp: 1773078882039
+  size: 14775277
+  timestamp: 1767136025302
 - conda: https://conda.anaconda.org/conda-forge/linux-64/libmpdec-4.0.0-hb03c661_1.conda
   sha256: fe171ed5cf5959993d43ff72de7596e8ac2853e9021dec0344e583734f1e0843
   md5: 2c21e66f50753a083cbe6b80f38268fa
