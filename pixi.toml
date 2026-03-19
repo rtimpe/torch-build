@@ -67,6 +67,8 @@ z3-solver = "*"
 tlparse = "*"
 protobuf = "*" # for testing protobuf support in dynamo
 
+# Note about using ghostty
+# By default emacs (and probably other ncurses based programs, including ccmake) don't recognize TERM=xterm-ghostty, even after updating the terminfo db in ~/.terminfo.  This will hopefully be fixed when conda-forge updates ncurses to 6.6.  In the meantime, the issue seems to be that the command from the ghostty docs (infocmp -x xterm-ghostty | ssh YOUR-SERVER -- tic -x -) installs the ghostty config to ~/.terminfo/x rather than ~/.terminfo/78 (hex for x).  Can be fixed by running tic in the editor pixi env (and copy/pasting the infocmp for ghostty), but there's probably a better way
 [feature.editor.dependencies]
 emacs = "*"
 ripgrep = "*"
