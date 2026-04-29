@@ -136,6 +136,12 @@ python = "3.13.*"
 [feature.py313-env.activation.env]
 PYTORCH_DIR = "../pytorch-313"
 
+[feature.py310.dependencies]
+python = "3.10.*"
+
+[feature.py310-env.activation.env]
+PYTORCH_DIR = "../pytorch-310"
+
 [feature.cpython.dependencies]
 gcc = "*"
 gxx = "*"
@@ -171,6 +177,7 @@ PYTORCH_DIR = "../pytorch-315"
 [environments]
 py314 = ["py314", "py314-env", "dev"]
 py313 = ["py313", "py313-env", "dev"]
+py310 = ["py310", "py310-env", "dev"]
 ft = ["ft", "ft-env", "dev"]
 ci314 = ["py314", "py314-env", "ci"]
 cift = ["ft", "ft-env", "ci"]
