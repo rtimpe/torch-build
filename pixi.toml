@@ -165,7 +165,7 @@ readline = "*"
 config-py-rel = "cd ../cpython && mkdir -p build-dbg && cd build-dbg && ../configure --prefix=/home/rtimpe/git/torch-build/.pixi/envs/cpython/ --disable-gil"
 config-py-dbg = "cd ../cpython && mkdir -p build-dbg && cd build-dbg && ../configure --prefix=/home/rtimpe/git/torch-build/.pixi/envs/cpython/ --disable-gil --with-pydebug"
 build-py = "cd ../cpython/build-dbg && make install -j10"
-install-reqs = "cd $PYTORCH_DIR && python3 -m pip install -r requirements.txt" # needed for development versions that don't have builds in conda-forge/pypi
+install-reqs = "cd $PYTORCH_DIR && python3 -m pip install --no-cache-dir -r requirements.txt" # needed for development versions that don't have builds in conda-forge/pypi
 build = "cd $PYTORCH_DIR && ../torch-build/pytorch-build-custom-cpython.sh"
 
 # [feature.cpython.pypi-dependencies]
